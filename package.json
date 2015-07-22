@@ -1,0 +1,30 @@
+{
+  "name": "pkdemo",
+  "version": "0.0.0",
+  "description": "pkdemo",
+  "main": "index.js",
+  "author": "Tako Neko <oct8cat@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "debug": "^2.2.0",
+    "express": "^4.13.1",
+    "mongoose": "^4.0.8",
+    "winston": "^1.0.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.3.2",
+    "jshint": "^2.8.0"
+  },
+  "bin": {
+    "pkdemo": "daemon.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oct8cat/pkdemo"
+  },
+  "bugs": {
+    "url": "https://github.com/oct8cat/pkdemo/issues"
+  },
+  "homepage": "https://github.com/oct8cat/pkdemo"
+}
