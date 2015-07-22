@@ -9,7 +9,7 @@
 ## Installation
 
 ```
-git clone http://bitbucket.org/oct8cat/pkdemo
+git clone http://github.com/oct8cat/pkdemo
 cd pkdemo
 make install
 ```
