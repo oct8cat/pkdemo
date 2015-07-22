@@ -31,7 +31,7 @@ DEBUG=pkdemo:* ./bin/daemon.js
 curl --data template=hello! http://localhost:3000/send
 ```
 
-### Name substition
+### Name substitution
 ```
 curl --data template=hello,%20%25name%25! http://localhost:3000/send
 ```
