@@ -17,7 +17,7 @@ make install
 ## Running
 
 ```
-DEBUG=pkdemo:* ./bin/daemon
+DEBUG=pkdemo:* ./bin/daemon.js
 ```
 
 ## Logs
