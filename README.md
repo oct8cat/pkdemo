@@ -37,9 +37,14 @@ curl --data template=hello,%20%25name%25! http://localhost:3000/send
 ```
 
 
-## API Docs
+## Helpers
+
+```
+./bin/seed.js <N>
+```
+Populates `players` collection with <N> records.
 
 ```
 make doc
 ```
-Then see `docs` directory.
+Generates API docs in `doc` directory.
