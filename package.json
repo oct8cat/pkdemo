@@ -6,6 +6,7 @@
   "author": "Tako Neko <oct8cat@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "async": "^1.4.0",
     "body-parser": "^1.13.2",
     "debug": "^2.2.0",
     "express": "^4.13.1",
