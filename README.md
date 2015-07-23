@@ -42,7 +42,7 @@ curl --data template=hello,%20%25name%25! http://localhost:3000/send
 ```
 ./bin/seed.js <N>
 ```
-Populates `players` collection with <N> records.
+Populates `players` collection with *N* records.
 
 ```
 make doc
