@@ -2,30 +2,36 @@
   "name": "pkdemo",
   "version": "0.0.0",
   "description": "pkdemo",
-  "main": "index.js",
-  "author": "Tako Neko <oct8cat@gmail.com>",
+  "main": "lib/index.js",
+  "author": "Sergey Elsukov <oct8cat@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "async": "^1.4.0",
-    "body-parser": "^1.13.2",
-    "debug": "^2.2.0",
-    "express": "^4.13.1",
-    "mongoose": "^4.0.8",
-    "winston": "^1.0.1"
-  },
-  "devDependencies": {
-    "jsdoc": "^3.3.2",
-    "jshint": "^2.8.0"
-  },
-  "bin": {
-    "pkdemo": "daemon.js"
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.7",
+    "winston": "^3.2.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oct8cat/pkdemo"
+    "url": "git+https://github.com/oct8cat/pkdemo.git"
   },
   "bugs": {
     "url": "https://github.com/oct8cat/pkdemo/issues"
   },
-  "homepage": "https://github.com/oct8cat/pkdemo"
+  "homepage": "https://github.com/oct8cat/pkdemo",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "DEBUG=pkdemo:* node bin/start",
+    "generate-players": "node bin/generate-players",
+    "test-simple": "curl -H 'Content-Type: application/json' -d '{\"template\": \"hello\"}' http://localhost:3000/send",
+    "test-named": "curl -H 'Content-Type: application/json' -d '{\"template\": \"hello, {name}\"}' http://localhost:3000/send"
+  },
+  "keywords": [],
+  "bin": {
+    "pkdemo": "generate-players.js"
+  },
+  "devDependencies": {}
 }

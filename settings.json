@@ -1,5 +1,5 @@
 {
-    "db": {
-        "uri": "mongodb://localhost/pkdemo"
-    }
+  "db": {
+    "uri": "mongodb://localhost:27017/pkdemo"
+  }
 }
