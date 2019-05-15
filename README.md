@@ -1,10 +1,5 @@
 # pkdemo
 
-## Requirements
-
-* Node.js + NPM
-* MongoDB
-
 ## Installation
 
 ```
@@ -27,4 +22,4 @@ npm run test-simple // Send simple message
 npm run test-named // Send message with name substitution
 ```
 
-See `vkapi.log` for logs.
+See `pkdemo.log` for logs.

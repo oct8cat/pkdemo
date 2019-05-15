@@ -1,9 +1,7 @@
-var settings = require('../settings.json')
+const { dbUrl, testNames } = require('../settings')
 const {
   db: { mkDb }
 } = require('..')
-
-const NAMES = ['alice', 'bob', 'carol']
 
 const main = async () => {
   if (process.argv.length < 3) return usage()
@@ -12,10 +10,10 @@ const main = async () => {
   const db = mkDb()
   const Player = db.model('Player')
 
-  await db.connect(settings.db.uri)
+  await db.connect(dbUrl)
   await Player.deleteMany({})
   for (let i = 0; i < total; i += 1) {
-    const name = NAMES[Math.floor(Math.random() * NAMES.length)]
+    const name = testNames[Math.floor(Math.random() * testNames.length)]
     await Player.create({ vk_id: i, first_name: name })
   }
   const count = await Player.countDocuments()
@@ -24,7 +22,7 @@ const main = async () => {
 }
 
 const usage = () => {
-  console.log('Usage: ./seed.js <players>')
+  console.log('Usage: generate-players.js <players>')
   console.log('<players> - number of player records to be generated.')
 }
 

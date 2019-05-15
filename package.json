@@ -10,7 +10,7 @@
     "debug": "^4.1.1",
     "express": "^4.16.4",
     "mongoose": "^5.5.7",
-    "winston": "^3.2.1"
+    "ramda": "^0.26.1"
   },
   "repository": {
     "type": "git",
@@ -24,14 +24,14 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "DEBUG=pkdemo:* node bin/start",
+    "start": "DEBUG=pkdemo node bin/start",
     "generate-players": "node bin/generate-players",
     "test-simple": "curl -H 'Content-Type: application/json' -d '{\"template\": \"hello\"}' http://localhost:3000/send",
     "test-named": "curl -H 'Content-Type: application/json' -d '{\"template\": \"hello, {name}\"}' http://localhost:3000/send"
   },
-  "keywords": [],
   "bin": {
     "pkdemo": "generate-players.js"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": []
 }

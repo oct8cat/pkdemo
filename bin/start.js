@@ -1,20 +1,19 @@
-const debug = require('debug')('pkdemo:app')
-const settings = require('../settings.json')
+const { dbUrl } = require('../settings')
 const {
   db: { mkDb },
   app: { mkApp },
   broadcaster: { mkBroadcaster }
 } = require('..')
 
-const start = async () => {
+const main = async () => {
   const db = mkDb()
   const broadcaster = mkBroadcaster(db)
   const app = mkApp(broadcaster)
   const port = process.env.PORT || 3000
 
-  await db.connect(settings.db.uri)
+  await db.connect(dbUrl)
   await broadcaster.start()
-  app.listen(port, () => debug(`App is now running on port ${port}`))
+  await app.start(port)
 }
 
-if (require.main === module) start()
+if (require.main === module) main()
